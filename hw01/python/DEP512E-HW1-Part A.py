@@ -102,9 +102,9 @@ plt.show()
 
  #Problem 2: ground acceleration (m/s^2), dt = 0.005 s
 dt = 0.005
-ag = np.loadtxt("ground_acc.txt")
+ag = np.loadtxt("ground_acc_HW1.txt")
 t = np.arange(len(ag)) * dt
-p = -m * ag
+p = -m * ag * 9.806 # fixed the external force
 
 x, v, a = newmark(m, c, k, p, dt, beta, gamma, 0, 0)
 plt.figure()
